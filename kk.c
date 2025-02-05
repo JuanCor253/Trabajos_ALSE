@@ -1,3 +1,0 @@
-Juanes
-
-Dicskon
