@@ -1,3 +1,3 @@
 cmake_minimum_required(VERSION 3.10)
-project(clasificar.cpp)
-add_executable(clasificar clasificar.cpp)
+project(Clasificador)
+add_executable(clasificador clasificar.cpp)
