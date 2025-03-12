@@ -1,3 +1,5 @@
+//By: Juan Esteban Cortés y Dickson Trujillo
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>

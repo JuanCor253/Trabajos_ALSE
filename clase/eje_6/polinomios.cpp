@@ -1,10 +1,12 @@
+//By: Juan Esteban Cortés Y Dickson Trujillo
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
 // Máximo exponente permitido en el polinomio (0 a MAX_EXP-1)
-#define MAX_EXP 100
+#define MAX_EXP 101
 
 // Función para separar y sumar coeficientes en el arreglo de polinomios
 void procesar_termino(const char *termino, int pol[]) {
