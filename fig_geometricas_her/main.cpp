@@ -13,15 +13,17 @@ int main()
 
     cout << "Ingrese el radio del primer circulo:" << endl;
     cin >> r1;
-    cout << "Ahora la coordenada en x" << endl;
+    cout << "Ahora ingrese las coordenadas del centro del círculo." << endl;
+    cout << "Ingrese la coordenada en x" << endl;
     cin >> x1;
-    cout << "Ahora la coordenada en y" << endl;
+    cout << "ingrese la coordenada en y" << endl;
     cin >> y1;
     cout << "Ingrese el radio del segundo circulo:" << endl;
     cin >> r2;
-    cout << "Ahora la coordenada en x" << endl;
+    cout << "Ahora ingrese las coordenadas del centro del círculo." << endl;
+    cout << "Ingrese la coordenada en x" << endl;
     cin >> x2;
-    cout << "Ahora la coordenada en y" << endl;
+    cout << "Ingrese la coordenada en y" << endl;
     cin >> y2;
 
     Circulo c1(r1, x1, y1); // Círculo con radio 5 y centro en (0,0)
