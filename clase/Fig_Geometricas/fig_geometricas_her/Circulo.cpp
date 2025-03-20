@@ -32,6 +32,7 @@ float Circulo::perimetro()
 {
     return 2 * M_PI * _radio;
 }
+
 bool Circulo::intersectaCon(const Circulo &otro)
 {
     float distancia = sqrt(pow(getX() - otro.getX(), 2) + pow(getY() - otro.getY(), 2));

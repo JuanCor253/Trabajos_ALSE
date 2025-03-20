@@ -1,5 +1,5 @@
-
 #include "estudiante.h"
+
 
 void Estudiante::agregarNota(const double &nota)
 {
@@ -17,9 +17,9 @@ double Estudiante::promedio()
 }
 Estudiante::Estudiante(const string &nombre, const string &apellido, const int &docid, const int &cod) : Persona(docid)
 {
-    this->nombre = nombre;
-    this->apellido = apellido;
-    this->codigo = cod;
+    Nombre(nombre);
+    Apellido(apellido);
+    Codigo(cod);
 }
 ostream &operator<<(ostream &os, const Estudiante &e)
 {

@@ -3,14 +3,19 @@
 
 using namespace std;
 
-Persona::Persona(int docid)
+
+Persona::Persona(string nombre, string apellido, int docid)
 {
-    doc_identidad = docid;
+    this->nombre = nombre;
+    this->apellido = apellido;
+    this ->doc_identidad = docid;
 }
+
 void Persona::Nombre(const string &nombre)
 {
     this->nombre = nombre;
 }
+
 string Persona::Nombre()
 {
     return nombre;
@@ -20,6 +25,7 @@ void Persona::Apellido(const string &apellido)
 {
     this->apellido = apellido;
 }
+
 string Persona::Apellido()
 {
     return apellido;
@@ -35,11 +41,12 @@ int Persona::Doc_identidad()
     return doc_identidad;
 }
 
-Persona::Persona()
+ostream &operator<<(ostream &os, const Persona &p)
 {
-    doc_identidad = 0;
-    nombre = "";
-    apellido = "";
+    os << "Nombre: " << p.nombre << "\n";
+    os << "Apellido: " << p.apellido << "\n";
+    os << "Documento: " << p.doc_identidad << "\n";
+    return os;
 }
 
 Persona::~Persona()

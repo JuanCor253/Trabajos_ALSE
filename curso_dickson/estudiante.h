@@ -9,6 +9,7 @@ class Estudiante : public Persona
 {
     vector<double> notas;
     int codigo;
+    Estudiante();
     void Codigo(const int &cod);
     double Nota(const int &i);
 
