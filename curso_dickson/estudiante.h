@@ -1,7 +1,7 @@
 
 #include "persona.h"
 #include <vector>
-#include <iostream>
+
 
 using namespace std;
 
@@ -18,6 +18,6 @@ public:
     Estudiante(const string &nombre, const string &apellido, const int &docid, const int &cod);
     int Codigo();
     void agregarNota(const double &nota);
-    double promedio();
+    double promedio() const;
     friend ostream &operator<<(ostream &os, const Estudiante &e);
 };

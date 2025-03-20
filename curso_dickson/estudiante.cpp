@@ -1,12 +1,20 @@
 #include "estudiante.h"
+#include <iostream>
+#include <vector>
 
+using namespace std;
+
+Estudiante::Estudiante(): Persona("", "", 0)
+{
+    codigo = 0;
+}
 
 void Estudiante::agregarNota(const double &nota)
 {
     notas.push_back(nota);
 }
 
-double Estudiante::promedio()
+double Estudiante::promedio() const
 {
     double promedio = 0.0;
     for (int i = 0; i < notas.size(); i++)
@@ -15,27 +23,34 @@ double Estudiante::promedio()
     }
     return promedio / notas.size();
 }
-Estudiante::Estudiante(const string &nombre, const string &apellido, const int &docid, const int &cod) : Persona(docid)
+
+Estudiante::Estudiante(const int &cod) : Persona("", "", 0)
 {
-    Nombre(nombre);
-    Apellido(apellido);
-    Codigo(cod);
+    codigo = cod;
 }
+
+Estudiante::Estudiante(const string &nombre, const string &apellido, const int &docid, const int &cod) : Persona(nombre, apellido, docid)
+{
+    codigo = cod;
+}
+
+int Estudiante::Codigo()
+{
+    return codigo;
+}
+
 ostream &operator<<(ostream &os, const Estudiante &e)
 {
-    os << "Nombre: " << e.nombre << "\n";
-    os << "Apellido: " << e.apellido << "\n";
-    os << "Documento: " << e.doc_identidad << "\n";
-    os << "Código: " << e.codigo << "\n";
-    os << "Notas: ";
-    for (const auto &nota : e.notas)
-    {
-        os << nota << " ";
-    }
+    os << e.Nombre() << " " << e.Apellido() << " con C.C: " << e.Doc_identidad() << " y codigo: " << e.codigo;
     return os;
 }
-Estudiante::Estudiante(const int &cod)
-{
 
-    cout << "Estudiante: " << nombre << " " << apellido << " Documento: " << doc_identidad << endl;
+void Estudiante::Codigo(const int &cod)
+{
+    codigo = cod;
+}
+
+double Estudiante::Nota(const int &i)
+{
+    return notas[i];
 }

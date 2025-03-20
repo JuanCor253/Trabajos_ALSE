@@ -6,18 +6,16 @@
 using namespace std;
 
 class Persona{
-  string nombre;
-  string apellido;
-  int doc_identidad;
+  string _nombre;
+  string _apellido;
+  int _doc_identidad;
 
 public:
   Persona( string nombre, string apellido, int docid);
   string Apellido() const;
-  string Nombre() const;
   int Doc_identidad() const;
+  string Nombre() const;
 
   friend ostream &operator<<(ostream &os, const Persona &p);
-
-  ~Persona();
 };
 #endif
