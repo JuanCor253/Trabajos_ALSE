@@ -21,7 +21,7 @@ int main()
     db.insertardato(d);
 
     // Leer el dato más reciente (puedes cambiar el ID si conoces uno específico)
-    int id_a_leer = 1; // Asegúrate de que exista, o cambia por el último ID
+    int id_a_leer = 2; // Asegúrate de que exista, o cambia por el último ID
     dato leido = db.leerdato(id_a_leer);
 
     // Mostrar el dato leído
