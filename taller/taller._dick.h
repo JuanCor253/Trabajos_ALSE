@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <sqlite3.h>
 #include <string>
-using namespace std;
 #include <iostream>
+
+using namespace std;
 
 struct dato
 {

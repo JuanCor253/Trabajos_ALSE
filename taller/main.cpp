@@ -20,21 +20,21 @@ int main()
     // Insertar el dato
     db.insertardato(d);
 
-    // Leer el dato más reciente (puedes cambiar el ID si conoces uno específico)
-    int id_a_leer = 2; // Asegúrate de que exista, o cambia por el último ID
-    dato leido = db.leerdato(id_a_leer);
-
-    // Mostrar el dato leído
-    cout << "Fecha: " << leido.fecha << endl;
-    cout << "Hora: " << leido.hora << endl;
-    cout << "Latitud: " << leido.latitud << endl;
-    cout << "Longitud: " << leido.longitud << endl;
-    cout << "Altura: " << leido.altura << endl;
-    cout << "Temperatura: " << leido.temp << endl;
-    cout << "Humedad: " << leido.humedad << endl;
-    cout << "Vel. Viento: " << leido.vel_viento << endl;
-    cout << "Dir. Viento: " << leido.dir_viento << endl;
-    cout << "Precipitacion: " << leido.precipitacion << endl;
-
+    for (int i = 1; i < 70; i++)
+    {
+        cout << "Leyendo dato con ID: " << i << endl;
+        dato d2 = db.leerdato(i);
+        cout << "ID: " << i << endl;
+        cout << "Fecha: " << d2.fecha << endl;
+        cout << "Hora: " << d2.hora << endl;
+        cout << "Latitud: " << d2.latitud << endl;
+        cout << "Longitud: " << d2.longitud << endl;
+        cout << "Altura: " << d2.altura << endl;
+        cout << "Temperatura: " << d2.temp << endl;
+        cout << "Humedad: " << d2.humedad << endl;
+        cout << "Vel. Viento: " << d2.vel_viento << endl;
+        cout << "Dir. Viento: " << d2.dir_viento << endl;
+        cout << "Precipitacion: " << d2.precipitacion << endl;
+    }
     return 0;
 }

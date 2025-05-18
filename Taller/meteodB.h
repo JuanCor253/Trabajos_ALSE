@@ -1,8 +1,5 @@
-//Juan Cortés y Dickson Trujillo Version beta 1.0
-
-#ifndef METEODB_H
-#define METEODB_H
-
+// Codigo corregido by Juan Cortés y Dickson Trujillo
+// Fecha: 18-05-2025
 #include <stdio.h>
 #include <stdlib.h>
 #include <sqlite3.h>
@@ -15,22 +12,20 @@ struct dato
 {
     string fecha, hora;
     double latitud, longitud, altura;
-    double dir_viento, vel_viento;
-    double temp, humedad;
+    double dir_viento, vel_viento, temp, humedad;
     double precipitacion;
-}
+};
 
-class meteodB
+class Meteodb
 {
+
     string url;
     sqlite3 *db;
 
-private:
-    meteodB();
-    ~meteodB();
-    dato LeerDato(int i);
-    void InsertarDato(dato d);
-    static int callback(void *data, int argc, char **argv, char **azColName);
-}
-
-#endif // METEODB_H
+public:
+    Meteodb();
+    ~Meteodb();
+    dato leerdato(int i);
+    void insertardato(dato d);
+    static int callback(void *NotUsed, int argc, char **argv, char **azColName);
+};

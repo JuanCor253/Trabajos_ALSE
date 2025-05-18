@@ -2,7 +2,7 @@
 
 Meteodb::Meteodb()
 {
-    url = "/home/permafrost/Alse_1/gitworks/Trabajos_ALSE/taller/meteo.als";
+    url = "meteo.als";
     if (sqlite3_open(url.c_str(), &db))
     {
         cerr << "No se pudo abrir la base de datos: " << sqlite3_errmsg(db) << endl;
